@@ -1,13 +1,11 @@
 
 exports.seed = function(knex) {
   // Deletes ALL existing entries
-  return knex('table_name').del()
+  return knex('events').del()
     .then(function () {
-      // Inserts seed entries
-      return knex('table_name').insert([
-        {id: 1, colName: 'rowValue1'},
-        {id: 2, colName: 'rowValue2'},
-        {id: 3, colName: 'rowValue3'}
+      // dummy event
+      return knex('events').insert([
+        { id: 1, event: "Anthony's Party", description: "The best party ever." }
       ]);
     });
 };

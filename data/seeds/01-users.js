@@ -1,13 +1,18 @@
+const faker = require('faker');
 
 exports.seed = function(knex) {
   // Deletes ALL existing entries
-  return knex('table_name').del()
+  return knex('users').del()
     .then(function () {
-      // Inserts seed entries
-      return knex('table_name').insert([
-        {id: 1, colName: 'rowValue1'},
-        {id: 2, colName: 'rowValue2'},
-        {id: 3, colName: 'rowValue3'}
+      // dummy user entry
+      return knex('users').insert([
+        {
+          id: 1, 
+          firstname: 'John', 
+          lastname: 'Smith', 
+          email: 'FakeEmail5@gmail.com', 
+          password: faker.internet.password() 
+        }
       ]);
     });
 };
