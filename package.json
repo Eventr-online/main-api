@@ -1,6 +1,9 @@
 {
   "name": "eventr-api",
   "version": "1.0.0",
+  "engines": {
+    "node": "12.13.0"
+  },
   "description": "Data for Eventr",
   "main": "index.js",
   "scripts": {
