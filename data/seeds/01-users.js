@@ -10,8 +10,8 @@ exports.seed = function(knex) {
           id: 1, 
           firstname: 'John', 
           lastname: 'Smith', 
-          email: 'FakeEmail5@gmail.com', 
-          password: faker.internet.password() 
+          email: 'FakeEmail5@gmail.com',
+          password: faker.internet.password()
         }
       ]);
     });
